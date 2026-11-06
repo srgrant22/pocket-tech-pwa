@@ -1,0 +1,31 @@
+/* Original website styling. This file is not part of the PWA conversion code. */
+:root { --navy: #102338; --blue: #085b73; --cyan: #9ff4e4; --paper: #f4f8fb; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--navy); font: 16px/1.7 system-ui, sans-serif; }
+a { color: inherit; }
+.topbar { max-width: 1160px; margin: auto; padding: 24px 6%; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; font-weight: 800; font-size: 20px; }
+.brand span { background: var(--navy); color: var(--cyan); padding: 8px 10px; border-radius: 12px; font-size: 16px; }
+.badge, .eyebrow, .number { font-size: 10px; letter-spacing: 2px; font-weight: 750; }
+main { max-width: 1160px; margin: auto; padding: 0 6%; }
+.hero { position: relative; overflow: hidden; border-radius: 25px; background: var(--navy); color: white; padding: 65px 7%; }
+.hero .eyebrow { color: var(--cyan); position: relative; z-index: 1; }
+h1 { font-size: clamp(40px, 6vw, 72px); line-height: 1.08; letter-spacing: -3px; font-weight: 650; margin: 24px 0; position: relative; z-index: 1; }
+em { font-style: normal; color: var(--cyan); }
+.intro { max-width: 440px; color: #c1d2e0; position: relative; z-index: 1; }
+.button { display: inline-block; border-radius: 99px; padding: 12px 22px; background: var(--cyan); color: var(--navy); text-decoration: none; font-weight: 700; font-size: 13px; margin-top: 18px; position: relative; z-index: 1; }
+.orb { position: absolute; right: -50px; top: 60px; height: 330px; width: 330px; border-radius: 50%; border: 1px solid #86e7d355; display: grid; place-items: center; background: radial-gradient(circle, #5af2c330, transparent 65%); }
+.orb:before { content: ''; position: absolute; inset: 30px; border: 1px solid #86e7d344; border-radius: 50%; }
+.orb span { color: var(--cyan); font-size: 130px; opacity: .55; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding: 28px 0; }
+article { background: white; border: 1px solid #dce6ef; border-radius: 16px; padding: 26px; }
+.number { color: var(--blue); }
+h2 { font-size: 21px; line-height: 1.3; letter-spacing: -.5px; }
+article p, .note p { font-size: 14px; color: #4e6377; }
+.note { background: #e3f3f1; border-left: 4px solid var(--blue); padding: 22px 28px; border-radius: 12px; }
+.note h2 { margin-top: 0; }
+footer { max-width: 1160px; margin: auto; padding: 32px 6%; font-size: 12px; color: #536b7c; }
+a:focus-visible { outline: 3px solid #f7ad45; outline-offset: 5px; }
+@media(max-width: 720px) { .badge { display: none; } .cards { grid-template-columns: 1fr; } .hero { padding: 38px 8%; } .orb { opacity: .25; right: -180px; } h1 { letter-spacing: -2px; } }
+@media(prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
